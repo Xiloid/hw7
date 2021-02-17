@@ -11,9 +11,9 @@
 
 def longest_strings(list_in):
     longest = []
-    y = max(list_in, key=len)
+    max_elem = max(list_in, key=len)
     for i in list_in:
-        if len(i) == len(y):
+        if len(i) == len(max_elem):
             longest.append(i)
     return longest
 
