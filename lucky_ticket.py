@@ -7,13 +7,17 @@
 def is_lucky(ticket_num):
     s = str(ticket_num)
     x = list(s)
-    print(x)
-    sum1 = int(s[0]) + int(s[1]) + int(s[2])
-    sum2 = int(s[3]) + int(s[4]) + int(s[5])
-    if sum1 == sum2:
-        print('Счастливый')
+    lentgh_list = len(x)
+    s1 = s2 = 0
+    for i in range(lentgh_list):
+        if i < lentgh_list // 2:
+            s1 += int(x[i])
+        else:
+            s2 += int(x[i])
+    if s1 == s2:
+        return True
     else:
-        print('Обычный')
+        return False
 
 
 assert is_lucky(1230) is True
