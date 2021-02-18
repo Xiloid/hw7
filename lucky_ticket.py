@@ -5,16 +5,16 @@
 
 
 def is_lucky(ticket_num):
-    s = str(ticket_num)
-    x = list(s)
-    lentgh_list = len(x)
-    s1 = s2 = 0
+    to_str = str(ticket_num)
+    to_list = list(to_str)
+    lentgh_list = len(to_list)
+    half_1 = half_2 = 0
     for i in range(lentgh_list):
         if i < lentgh_list // 2:
-            s1 += int(x[i])
+            half_1 += int(to_list[i])
         else:
-            s2 += int(x[i])
-    if s1 == s2:
+            half_2 += int(to_list[i])
+    if half_1 == half_2:
         return True
     else:
         return False
