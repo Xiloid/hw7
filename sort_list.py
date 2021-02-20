@@ -7,10 +7,11 @@
 """
 t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
 a = []
-for i in enumerate(t_1):
-    if i == -1:
-        a.append()
+for i, value in enumerate(t_1):
+    if value == -1:
+        a.append(i)
     print(a)
+
 
 
 
