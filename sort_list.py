@@ -9,9 +9,9 @@ t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
 a = []
 for i, value in enumerate(t_1):
     if value == -1:
-        a.append(i)
-    print(a)
-
+       a.append(i)
+print(a)
+print(t_1)
 
 
 
