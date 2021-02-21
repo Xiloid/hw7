@@ -8,24 +8,19 @@
 
 
 #def sort_ascending(booboo):
-t_2 = [-1, -1, -1, -1, -1]
+t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
+#t_1 = [-1, -1, -1, -1, -1]
 a = []
-for i, value in enumerate(t_2):
-    if value == -1:
-       a.append(i)
-t1 = t_2.copy()
-t1.sort()
-for s in t1:
-    if s == -1:
-        t1.remove(s)
-#while t1[0] == -1 or t1[0] != []:
-#        t1.remove(-1)
-for idx in a:
-    t1.insert(idx, -1)
-print(t1)
-#    return t1
+for i, value in enumerate(t_1):
+    if value != -1:
+        a.append(value)
+        a.sort()
+print(a)
+for i in range(len(t_1)):
+    if t_1[i] == -1:
+        a.insert(i, -1)
+print(a)
 
-''''
 t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
 assert sort_ascending(t_1) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
@@ -41,4 +36,4 @@ assert sort_ascending(t_4) == [1, 3, -1, 23, 43, -1, -1, 54, -1, -1, -1, 77]
 t_5 = [-1]
 assert sort_ascending(t_5) == [-1]
 
-print("All tests passed successfully!")'''
+print("All tests passed successfully!")
