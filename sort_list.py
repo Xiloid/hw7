@@ -7,19 +7,17 @@
 """
 
 
-#def sort_ascending(booboo):
-t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
-#t_1 = [-1, -1, -1, -1, -1]
-a = []
-for i, value in enumerate(t_1):
-    if value != -1:
-        a.append(value)
-        a.sort()
-print(a)
-for i in range(len(t_1)):
-    if t_1[i] == -1:
-        a.insert(i, -1)
-print(a)
+def sort_ascending(x):
+    tmp_list = []
+    for i, value in enumerate(x):
+        if value != -1:
+            tmp_list.append(value)
+            tmp_list.sort()
+    for i in range(len(x)):
+        if x[i] == -1:
+            tmp_list.insert(i, -1)
+    return tmp_list
+
 
 t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
 assert sort_ascending(t_1) == [-1, 150, 160, 170, -1, -1, 180, 190]
