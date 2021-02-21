@@ -5,20 +5,27 @@
     [in]   [6, 3, -1, 4, 2, -1, 1]
     [out]  [1, 2, -1, 3, 4, -1, 6]
 """
-t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
+
+
+#def sort_ascending(booboo):
+t_2 = [-1, -1, -1, -1, -1]
 a = []
-for i, value in enumerate(t_1):
+for i, value in enumerate(t_2):
     if value == -1:
        a.append(i)
-print(a)
-print(t_1)
+t1 = t_2.copy()
+t1.sort()
+for s in t1:
+    if s == -1:
+        t1.remove(s)
+#while t1[0] == -1 or t1[0] != []:
+#        t1.remove(-1)
+for idx in a:
+    t1.insert(idx, -1)
+print(t1)
+#    return t1
 
-
-
-'''def sort_ascending(x):
-    pass
-
-
+''''
 t_1 = [-1, 150, 190, 170, -1, -1, 160, 180]
 assert sort_ascending(t_1) == [-1, 150, 160, 170, -1, -1, 180, 190]
 
